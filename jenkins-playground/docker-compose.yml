@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+    jenkins-server:
+      image: jenkins/jenkins:lts
+      privileged: true
+      user: root
+      ports:
+       - 8080:8080
+       - 50000:50000
+      container_name: jenkins-server
+      volumes:
+       - /data/jenkins:/var/jenkins_home
+       - /var/run/docker.sock:/var/run/docker.sock
+    jenkins-agent:
+     image: jenkins/ssh-agent:jdk11
+     privileged: true
+     user: root
+     container_name: jenkins-agent
+     expose:
+       - 22
+     environment:
+      - JENKINS_AGENT_SSH_PUBKEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP1KHhLJnruChkgokJtwyScuaD8CRX1pHUqYACX2Ur5Q frazer.hodge@gmail.com
+    app-staging:
+     image: app-staging
+     build: https://github.com/teran/docker-nginx-ssh.git
+        #context: app-staging-container
+        #dockerfile: app-staging-container/Dockerfile
+     privileged: true
+     user: root
+     container_name: app-staging
+     expose:
+      - 22
+     ports:      
+      - "9080:80"
+     environment:
+      - SSH_AUTHORIZED_KEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP1KHhLJnruChkgokJtwyScuaD8CRX1pHUqYACX2Ur5Q frazer.hodge@gmail.com
