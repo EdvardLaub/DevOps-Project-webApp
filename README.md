@@ -1,4 +1,4 @@
-# sample-jenkins-pipeline
+# example-jenkins-pipeline
 
 Sample Jenkins pipeline example. The pipeline is supposed to be used with MultiBranch Pipeline jobs.
 
