@@ -40,7 +40,7 @@ cd jenkins-playground
 docker-compose up --build --detach
 ```
 
-You can also use Visual Studio Code to contol the Jenkins Playground environement via the docker compose extension:
+You can also use Visual Studio Code to contol the Jenkins Playground environment via the docker compose extension:
  - right click on the `docker-compose.yml` file
  - select "Compose Up"
 
