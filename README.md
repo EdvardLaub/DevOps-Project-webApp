@@ -54,6 +54,8 @@ the logs in the persistent volume folder `/data/jenkins`
 Select the recommended typical plugins when prompted for the initial plugins. In addition, once the system is setup install the following additional Jenkins plugins:
 
  - nodejs: For supporting installing NodeJS tool environment.
+   - Add the referenced installation id `Node 20.x` to NodeJS tools configuration. 
+   - Select the latest stable NodeJS version from the v20.x LTS channel.
  - clover: For reporting code coverage.
 
 ### Additional Setup
