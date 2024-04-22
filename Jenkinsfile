@@ -56,6 +56,9 @@ pipeline {
             post {
                 // Traditional CI will also publish build artifact. This is omitted since the build tags are used
                 // for non-compiled based NodeJS based application.
+                success {
+                    echo "TODO: artifact archiving"
+                }
             }
         }        
 
