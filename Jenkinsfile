@@ -52,7 +52,6 @@ pipeline {
                     // TODO: Patch the build number
                     sh 'npm run build'                    
                 }
-            }
             post {
                 // Traditional CI will also publish build artifact. This is omitted since the build tags are used
                 // for non-compiled based NodeJS based application.
@@ -60,7 +59,8 @@ pipeline {
                     echo "TODO: artifact archiving"
                 }
             }
-        }        
+        }
+                
 
         stage('deploy') {
             steps {
