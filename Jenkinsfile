@@ -13,7 +13,7 @@ pipeline {
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {
                     sh 'npm config ls'
                     sh 'npm install'         
-                }
+                // }
             }            
         }
         // Catch typos and recommended best practice.
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {                       
                     sh 'npm run lint || true'                 
-                }
+                // }
             }
         }
         stage('unit-test') {
@@ -30,7 +30,7 @@ pipeline {
                     sh 'rm -f test-results.xml'
                     sh 'npm run test:unit'
                     sh 'npm run test:coverage'
-                }
+                // }
             }
             post {
                 always {
