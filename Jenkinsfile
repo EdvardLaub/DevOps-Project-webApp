@@ -17,7 +17,7 @@ pipeline {
             }            
         }
         // Catch typos and recommended best practice.
-        // stage('static-analysis') {
+        // stage('static-analysis')
             steps {
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {                       
                     sh 'npm run lint || true'                 
@@ -48,7 +48,7 @@ pipeline {
         }        
         stage('build') {            
             steps {                                             
-                // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {   
+                // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}")  
                     // TODO: Patch the build number
                     sh 'npm run build'                    
                 }
@@ -72,4 +72,4 @@ pipeline {
             }
         }
     }
-
+}
