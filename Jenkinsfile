@@ -17,13 +17,13 @@ pipeline {
             }            
         }
         // Catch typos and recommended best practice.
-        // stage('static-analysis')
-            steps {
+        // stage('static-analysis') {
+            // steps {
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {                       
                 // sh 'npm run lint || true'                 
                 // }
-            }
-        }
+            // }
+        // }
         stage('unit-test') {
             steps {
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {
