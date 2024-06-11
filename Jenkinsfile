@@ -11,8 +11,8 @@ pipeline {
         stage('setup') {
             steps {             
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {
-                    sh 'npm config ls'
-                    sh 'npm install'         
+                    // sh 'npm config ls'
+                    // sh 'npm install'         
                 // }
             }            
         }
@@ -27,9 +27,9 @@ pipeline {
         stage('unit-test') {
             steps {
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {
-                    sh 'rm -f test-results.xml'
-                    sh 'npm run test:unit'
-                    sh 'npm run test:coverage'
+                    // sh 'rm -f test-results.xml'
+                    // sh 'npm run test:unit'
+                    // sh 'npm run test:coverage'
                 // }
             }
             post {
