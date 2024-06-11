@@ -20,7 +20,7 @@ pipeline {
         // stage('static-analysis')
             steps {
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {                       
-                    sh 'npm run lint || true'                 
+                //sh 'npm run lint || true'                 
                 // }
             }
         }
@@ -72,4 +72,4 @@ pipeline {
             }
         }
     }
-
+}
