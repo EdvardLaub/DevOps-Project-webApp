@@ -8,8 +8,8 @@ pipeline {
    }
     stages {
         // Setup the required NodeJS on the agent
-        stage('setup') {
-            steps {             
+        //stage('setup') {
+            //steps {             
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {
                     // sh 'npm config ls'
                     // sh 'npm install'         
@@ -24,8 +24,8 @@ pipeline {
                 // }
             // }
         // }
-        stage('unit-test') {
-            steps {
+        //stage('unit-test') {
+            //steps {
                 // nodejs(nodeJSInstallationName: "${params.NODEJS_VERSION}") {
                     // sh 'rm -f test-results.xml'
                     // sh 'npm run test:unit'
